@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/naavvviigggaat"
+    app:startDestination="@id/enterGameFragment">
+
+    <fragment
+        android:id="@+id/enterGameFragment"
+        android:name="com.skgames.tra.EnterGameFragment"
+        android:label="fragment_enter_game"
+        tools:layout="@layout/fragment_enter_game" >
+        <action
+            android:id="@+id/action_enterGameFragment_to_playGaaammeeFragment"
+            app:destination="@id/playGaaammeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playGaaammeeFragment"
+        android:name="com.skgames.tra.PlayGaaammeeFragment"
+        android:label="fragment_play_gaaammee"
+        tools:layout="@layout/fragment_play_gaaammee" >
+        <action
+            android:id="@+id/action_playGaaammeeFragment_to_reesstartRestartFragment"
+            app:destination="@id/reesstartRestartFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/enterGameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/reesstartRestartFragment"
+        android:name="com.skgames.tra.ReesstartRestartFragment"
+        android:label="fragment_reesstart_restart"
+        tools:layout="@layout/fragment_reesstart_restart" >
+        <action
+            android:id="@+id/action_reesstartRestartFragment_to_playGaaammeeFragment"
+            app:destination="@id/playGaaammeeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/enterGameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
